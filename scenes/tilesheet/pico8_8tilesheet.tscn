@@ -1,0 +1,121 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://assets/tiles/pico8/8px/brown.png" type="Texture" id=1]
+[ext_resource path="res://assets/tiles/pico8/8px/blue.png" type="Texture" id=2]
+[ext_resource path="res://assets/tiles/pico8/8px/dark-gray.png" type="Texture" id=3]
+[ext_resource path="res://assets/tiles/pico8/8px/dark-blue.png" type="Texture" id=4]
+[ext_resource path="res://assets/tiles/pico8/8px/dark-green.png" type="Texture" id=5]
+[ext_resource path="res://assets/tiles/pico8/8px/indigo.png" type="Texture" id=6]
+[ext_resource path="res://assets/tiles/pico8/8px/light-gray.png" type="Texture" id=7]
+[ext_resource path="res://assets/tiles/pico8/8px/orange.png" type="Texture" id=8]
+[ext_resource path="res://assets/tiles/pico8/8px/peach.png" type="Texture" id=9]
+[ext_resource path="res://assets/tiles/pico8/8px/pink.png" type="Texture" id=10]
+[ext_resource path="res://assets/tiles/pico8/8px/red.png" type="Texture" id=11]
+[ext_resource path="res://assets/tiles/pico8/8px/white.png" type="Texture" id=12]
+[ext_resource path="res://assets/tiles/pico8/8px/yellow.png" type="Texture" id=13]
+[ext_resource path="res://assets/tiles/pico8/8px/black.png" type="Texture" id=14]
+[ext_resource path="res://assets/tiles/pico8/8px/green.png" type="Texture" id=15]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 4, 4 )
+
+[node name="tiles" type="Node2D" index="0"]
+
+[node name="brown" type="Sprite" parent="." index="0"]
+
+position = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
+
+[node name="blue" type="Sprite" parent="." index="1"]
+
+position = Vector2( 4, 12 )
+texture = ExtResource( 2 )
+
+[node name="dark-grey" type="Sprite" parent="." index="2"]
+
+position = Vector2( 4, 20 )
+texture = ExtResource( 3 )
+
+[node name="dark-blue" type="Sprite" parent="." index="3"]
+
+position = Vector2( 4, 28 )
+texture = ExtResource( 4 )
+
+[node name="dark-green" type="Sprite" parent="." index="4"]
+
+position = Vector2( 12, 4 )
+texture = ExtResource( 5 )
+
+[node name="indigo" type="Sprite" parent="." index="5"]
+
+position = Vector2( 12, 12 )
+texture = ExtResource( 6 )
+
+[node name="light-grey" type="Sprite" parent="." index="6"]
+
+position = Vector2( 12, 20 )
+texture = ExtResource( 7 )
+
+[node name="orange" type="Sprite" parent="." index="7"]
+
+position = Vector2( 12, 28 )
+texture = ExtResource( 8 )
+
+[node name="peach" type="Sprite" parent="." index="8"]
+
+position = Vector2( 20, 4 )
+texture = ExtResource( 9 )
+
+[node name="pink" type="Sprite" parent="." index="9"]
+
+position = Vector2( 20, 12 )
+texture = ExtResource( 10 )
+
+[node name="red" type="Sprite" parent="." index="10"]
+
+position = Vector2( 20, 20 )
+texture = ExtResource( 11 )
+
+[node name="white" type="Sprite" parent="." index="11"]
+
+position = Vector2( 20, 28 )
+texture = ExtResource( 12 )
+
+[node name="yellow" type="Sprite" parent="." index="12"]
+
+position = Vector2( 28, 4 )
+texture = ExtResource( 13 )
+
+[node name="black" type="Sprite" parent="." index="13"]
+
+position = Vector2( 28, 12 )
+texture = ExtResource( 14 )
+
+[node name="green" type="Sprite" parent="." index="14"]
+
+position = Vector2( 28, 28 )
+texture = ExtResource( 15 )
+
+[node name="black_limit" type="Sprite" parent="." index="15"]
+
+position = Vector2( 28, 20 )
+texture = ExtResource( 14 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="black_limit" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="black_limit/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+

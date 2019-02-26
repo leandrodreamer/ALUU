@@ -1,0 +1,288 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/aluu.gd" type="Script" id=1]
+[ext_resource path="res://assets/tiles/pico8/64px/orange.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
+[node name="aluu" type="KinematicBody2D" groups=[
+"player",
+]]
+
+position = Vector2( 960, 544 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="potion" type="Sprite" parent="." index="0"]
+
+visible = false
+position = Vector2( 4, 484 )
+texture = ExtResource( 2 )
+
+[node name="body" type="CollisionShape2D" parent="." index="1"]
+
+editor/display_folded = true
+shape = SubResource( 1 )
+
+[node name="cell_64" type="ColorRect" parent="body" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -24.0
+margin_top = -24.0
+margin_right = 24.0
+margin_bottom = -16.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 1, 0.945098, 0.909804, 1 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="cell_74" type="ColorRect" parent="body" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -24.0
+margin_top = -16.0
+margin_right = 24.0
+margin_bottom = -8.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 1, 0.945098, 0.909804, 1 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="cell_71" type="ColorRect" parent="body" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -24.0
+margin_top = -8.0
+margin_right = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 1, 0.945098, 0.909804, 1 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="cell_72" type="ColorRect" parent="body" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -24.0
+margin_right = 24.0
+margin_bottom = 8.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 1, 0.945098, 0.909804, 1 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="cell_75" type="ColorRect" parent="body" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -24.0
+margin_top = 8.0
+margin_right = 24.0
+margin_bottom = 16.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 1, 0.945098, 0.909804, 1 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="cell_73" type="ColorRect" parent="body" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -24.0
+margin_top = 16.0
+margin_right = 24.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 1, 0.945098, 0.909804, 1 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="cell_70" type="ColorRect" parent="body" index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -24.0
+margin_top = -32.0
+margin_right = 24.0
+margin_bottom = -24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0, 0, 0, 1 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="cell_66" type="ColorRect" parent="body" index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 24.0
+margin_top = -24.0
+margin_right = 32.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0, 0, 0, 1 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="cell_67" type="ColorRect" parent="body" index="8"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -32.0
+margin_top = -24.0
+margin_right = -24.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0, 0, 0, 1 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="cell_65" type="ColorRect" parent="body" index="9"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -24.0
+margin_top = 24.0
+margin_right = 24.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0, 0, 0, 1 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="cell_68" type="ColorRect" parent="body" index="10"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 4.0
+margin_top = -16.0
+margin_right = 20.0
+margin_bottom = -8.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0, 0, 0, 1 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="cell_76" type="ColorRect" parent="body" index="11"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 4.0
+margin_top = 8.0
+margin_right = 20.0
+margin_bottom = 16.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0, 0, 0, 1 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="skin" type="Sprite" parent="body" index="12"]
+
+[node name="Camera2D" type="Camera2D" parent="." index="2"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 3.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.1
+drag_margin_top = 0.1
+drag_margin_right = 0.1
+drag_margin_bottom = 0.1
+editor_draw_screen = true
+editor_draw_limits = true
+editor_draw_drag_margin = true
+_sections_unfolded = [ "Drag Margin", "Editor", "Offset", "Smoothing" ]
+
+
