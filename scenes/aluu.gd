@@ -1,7 +1,7 @@
 extends KinematicBody2D #ALUU
 
 # ATRIBUTOS
-var _speed = 600
+var _speed = 1600
 var _health = 100
 var _power = 1
 var _velocity = Vector2(0,0)
