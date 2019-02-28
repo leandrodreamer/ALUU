@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/others/Dialog_system/Dialog_caller.gd" type="Script" id=1]
+
+[node name="Dialog_caller" type="Node2D" index="0"]
+
+pause_mode = 1
+script = ExtResource( 1 )
+text = [ "" ]
+distance = 200
+text_speed = 1
+text_size = 40
+
+[node name="reactive" type="Timer" parent="." index="0"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[connection signal="timeout" from="reactive" to="." method="_on_reactive_timeout"]
+
+
