@@ -1,6 +1,6 @@
 extends Node2D
 
-export var text = []
+export (Array,String) var text = [""]
 export var distance = 200
 export var text_speed = 1
 export var text_size = 40

@@ -2,7 +2,7 @@ extends CanvasLayer
 
 export var text_size = 40
 export var text_speed = 1.0
-export var text = []
+export (Array,String) var text = [""]
 var actual_step = 0
 var enabled_mode = false
 
@@ -32,5 +32,5 @@ func _run_dialog():
 		$text_anim.playback_speed = text_speed
 		$text_anim.play("text_avance")
 		$box/Label.get_font("font").size = text_size
-		$box/Label.text = tr(str(text[actual_step-1]))
+		$box/Label.text = tr(text[actual_step-1])
 
